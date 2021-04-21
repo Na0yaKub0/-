@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="RecodeCell" customModule="OneWeekToDo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="98" height="98"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="98" height="98"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日にち" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5jE-Mz-KCS">
+                        <rect key="frame" x="0.0" y="0.0" width="98" height="29.5"/>
+                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="8"/>
+                        <color key="textColor" systemColor="systemGray2Color"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YqN-X0-Z7G">
+                        <rect key="frame" x="0.0" y="0.0" width="98" height="98"/>
+                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="22"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="％" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCm-Dr-W9n">
+                        <rect key="frame" x="0.0" y="68.5" width="98" height="29.5"/>
+                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="8"/>
+                        <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="dCm-Dr-W9n" secondAttribute="bottom" id="6m0-C7-mse"/>
+                <constraint firstItem="YqN-X0-Z7G" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" id="Dfv-To-ZeU"/>
+                <constraint firstItem="5jE-Mz-KCS" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.3" id="EMh-HE-Eum"/>
+                <constraint firstItem="dCm-Dr-W9n" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.3" id="FJe-0x-bqb"/>
+                <constraint firstItem="5jE-Mz-KCS" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="GbJ-RZ-mbe"/>
+                <constraint firstAttribute="trailing" secondItem="dCm-Dr-W9n" secondAttribute="trailing" id="JZc-FJ-8Tt"/>
+                <constraint firstItem="dCm-Dr-W9n" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="LYA-Yw-5zd"/>
+                <constraint firstItem="YqN-X0-Z7G" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Pbt-RL-0Xg"/>
+                <constraint firstAttribute="trailing" secondItem="5jE-Mz-KCS" secondAttribute="trailing" id="YdU-ja-9An"/>
+                <constraint firstItem="YqN-X0-Z7G" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="dfP-63-5vr"/>
+                <constraint firstAttribute="bottom" secondItem="YqN-X0-Z7G" secondAttribute="bottom" id="dkQ-7K-P80"/>
+                <constraint firstAttribute="trailing" secondItem="YqN-X0-Z7G" secondAttribute="trailing" id="jSh-0F-fYx"/>
+                <constraint firstItem="5jE-Mz-KCS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="kgb-RL-dSb"/>
+                <constraint firstItem="YqN-X0-Z7G" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="nwD-eu-aDS"/>
+                <constraint firstItem="dCm-Dr-W9n" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="phg-j3-KUi"/>
+                <constraint firstItem="5jE-Mz-KCS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="xLz-hS-09u"/>
+            </constraints>
+            <size key="customSize" width="98" height="98"/>
+            <connections>
+                <outlet property="RecodeAchievementRatio" destination="YqN-X0-Z7G" id="ic9-rc-WS2"/>
+                <outlet property="RecodeDay" destination="5jE-Mz-KCS" id="3UR-t4-ZtX"/>
+                <outlet property="recodePercent" destination="dCm-Dr-W9n" id="qgJ-p4-hZT"/>
+            </connections>
+            <point key="canvasLocation" x="159.42028985507247" y="87.053571428571431"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

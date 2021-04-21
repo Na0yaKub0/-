@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D0454E125BC311D009DC52F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D0454E025BC311D009DC52F /* GoogleService-Info.plist */; };
+		1D3635EE2561E0240007CB6D /* RecodeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3635ED2561E0240007CB6D /* RecodeClass.swift */; };
+		1D38CFAF255B4DFA009AAC83 /* MyToDoClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D38CFAE255B4DFA009AAC83 /* MyToDoClass.swift */; };
+		1D52D6332559FAFA003323AE /* RecodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D52D6322559FAFA003323AE /* RecodeViewController.swift */; };
+		1D52D6412559FD47003323AE /* TodoCellClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D52D63F2559FD47003323AE /* TodoCellClass.swift */; };
+		1D52D6422559FD47003323AE /* TodoCellClass.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D52D6402559FD47003323AE /* TodoCellClass.xib */; };
+		1D5D38242557756E00ABF9ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D38232557756E00ABF9ED /* AppDelegate.swift */; };
+		1D5D38262557756E00ABF9ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D38252557756E00ABF9ED /* SceneDelegate.swift */; };
+		1D5D38282557756E00ABF9ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D38272557756E00ABF9ED /* ViewController.swift */; };
+		1D5D382B2557756E00ABF9ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D5D38292557756E00ABF9ED /* Main.storyboard */; };
+		1D5D382D2557756F00ABF9ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D5D382C2557756F00ABF9ED /* Assets.xcassets */; };
+		1D5D38302557756F00ABF9ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D5D382E2557756F00ABF9ED /* LaunchScreen.storyboard */; };
+		1D66466B256336200061BCFB /* RecodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D664669256336200061BCFB /* RecodeCell.swift */; };
+		1D66466C256336200061BCFB /* RecodeCellClass.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D66466A256336200061BCFB /* RecodeCellClass.xib */; };
+		69E0F17ACF7A6D44E4111CB5 /* Pods_OneWeekToDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 917874BF758EAB0CD8A7AD1B /* Pods_OneWeekToDo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1C0DBC8BAE1CEBF6ABF3169B /* Pods-OneWeekToDo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneWeekToDo.debug.xcconfig"; path = "Target Support Files/Pods-OneWeekToDo/Pods-OneWeekToDo.debug.xcconfig"; sourceTree = "<group>"; };
+		1D0454E025BC311D009DC52F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1D3635ED2561E0240007CB6D /* RecodeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecodeClass.swift; sourceTree = "<group>"; };
+		1D38CFAE255B4DFA009AAC83 /* MyToDoClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyToDoClass.swift; sourceTree = "<group>"; };
+		1D52D6322559FAFA003323AE /* RecodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecodeViewController.swift; sourceTree = "<group>"; };
+		1D52D63F2559FD47003323AE /* TodoCellClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCellClass.swift; sourceTree = "<group>"; };
+		1D52D6402559FD47003323AE /* TodoCellClass.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodoCellClass.xib; sourceTree = "<group>"; };
+		1D5D38202557756E00ABF9ED /* OneWeekToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneWeekToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D5D38232557756E00ABF9ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1D5D38252557756E00ABF9ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1D5D38272557756E00ABF9ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1D5D382A2557756E00ABF9ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1D5D382C2557756F00ABF9ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1D5D382F2557756F00ABF9ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1D5D38312557756F00ABF9ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D664669256336200061BCFB /* RecodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecodeCell.swift; sourceTree = "<group>"; };
+		1D66466A256336200061BCFB /* RecodeCellClass.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecodeCellClass.xib; sourceTree = "<group>"; };
+		917874BF758EAB0CD8A7AD1B /* Pods_OneWeekToDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneWeekToDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFBF3BB14F6DE7E9A4EC814B /* Pods-OneWeekToDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneWeekToDo.release.xcconfig"; path = "Target Support Files/Pods-OneWeekToDo/Pods-OneWeekToDo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D5D381D2557756E00ABF9ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69E0F17ACF7A6D44E4111CB5 /* Pods_OneWeekToDo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D5D38172557756E00ABF9ED = {
+			isa = PBXGroup;
+			children = (
+				1D5D38222557756E00ABF9ED /* OneWeekToDo */,
+				1D5D38212557756E00ABF9ED /* Products */,
+				623DD8C1BF7D6D72A6230972 /* Pods */,
+				66DE463561A65012B0C7FE0D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1D5D38212557756E00ABF9ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D5D38202557756E00ABF9ED /* OneWeekToDo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D5D38222557756E00ABF9ED /* OneWeekToDo */ = {
+			isa = PBXGroup;
+			children = (
+				1D5D38232557756E00ABF9ED /* AppDelegate.swift */,
+				1D5D38252557756E00ABF9ED /* SceneDelegate.swift */,
+				1D5D38292557756E00ABF9ED /* Main.storyboard */,
+				1D5D38272557756E00ABF9ED /* ViewController.swift */,
+				1D52D63F2559FD47003323AE /* TodoCellClass.swift */,
+				1D52D6402559FD47003323AE /* TodoCellClass.xib */,
+				1D38CFAE255B4DFA009AAC83 /* MyToDoClass.swift */,
+				1D52D6322559FAFA003323AE /* RecodeViewController.swift */,
+				1D3635ED2561E0240007CB6D /* RecodeClass.swift */,
+				1D664669256336200061BCFB /* RecodeCell.swift */,
+				1D66466A256336200061BCFB /* RecodeCellClass.xib */,
+				1D5D382C2557756F00ABF9ED /* Assets.xcassets */,
+				1D5D382E2557756F00ABF9ED /* LaunchScreen.storyboard */,
+				1D5D38312557756F00ABF9ED /* Info.plist */,
+				1D0454E025BC311D009DC52F /* GoogleService-Info.plist */,
+			);
+			path = OneWeekToDo;
+			sourceTree = "<group>";
+		};
+		623DD8C1BF7D6D72A6230972 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C0DBC8BAE1CEBF6ABF3169B /* Pods-OneWeekToDo.debug.xcconfig */,
+				BFBF3BB14F6DE7E9A4EC814B /* Pods-OneWeekToDo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		66DE463561A65012B0C7FE0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				917874BF758EAB0CD8A7AD1B /* Pods_OneWeekToDo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D5D381F2557756E00ABF9ED /* OneWeekToDo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D5D38342557756F00ABF9ED /* Build configuration list for PBXNativeTarget "OneWeekToDo" */;
+			buildPhases = (
+				A57C6A221F2F4E900B51A783 /* [CP] Check Pods Manifest.lock */,
+				1D5D381C2557756E00ABF9ED /* Sources */,
+				1D5D381D2557756E00ABF9ED /* Frameworks */,
+				1D5D381E2557756E00ABF9ED /* Resources */,
+				B0C675063E70DA7FF35CFC15 /* [CP] Embed Pods Frameworks */,
+				F271108025C576CD0027C431 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneWeekToDo;
+			productName = OneWeekToDo;
+			productReference = 1D5D38202557756E00ABF9ED /* OneWeekToDo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1D5D38182557756E00ABF9ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1230;
+				ORGANIZATIONNAME = "久保　直哉";
+				TargetAttributes = {
+					1D5D381F2557756E00ABF9ED = {
+						CreatedOnToolsVersion = 11.2;
+					};
+				};
+			};
+			buildConfigurationList = 1D5D381B2557756E00ABF9ED /* Build configuration list for PBXProject "OneWeekToDo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1D5D38172557756E00ABF9ED;
+			productRefGroup = 1D5D38212557756E00ABF9ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D5D381F2557756E00ABF9ED /* OneWeekToDo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D5D381E2557756E00ABF9ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D5D38302557756F00ABF9ED /* LaunchScreen.storyboard in Resources */,
+				1D5D382D2557756F00ABF9ED /* Assets.xcassets in Resources */,
+				1D66466C256336200061BCFB /* RecodeCellClass.xib in Resources */,
+				1D52D6422559FD47003323AE /* TodoCellClass.xib in Resources */,
+				1D5D382B2557756E00ABF9ED /* Main.storyboard in Resources */,
+				1D0454E125BC311D009DC52F /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A57C6A221F2F4E900B51A783 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneWeekToDo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0C675063E70DA7FF35CFC15 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OneWeekToDo/Pods-OneWeekToDo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OneWeekToDo/Pods-OneWeekToDo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OneWeekToDo/Pods-OneWeekToDo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F271108025C576CD0027C431 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D5D381C2557756E00ABF9ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D66466B256336200061BCFB /* RecodeCell.swift in Sources */,
+				1D5D38282557756E00ABF9ED /* ViewController.swift in Sources */,
+				1D5D38242557756E00ABF9ED /* AppDelegate.swift in Sources */,
+				1D38CFAF255B4DFA009AAC83 /* MyToDoClass.swift in Sources */,
+				1D3635EE2561E0240007CB6D /* RecodeClass.swift in Sources */,
+				1D52D6412559FD47003323AE /* TodoCellClass.swift in Sources */,
+				1D52D6332559FAFA003323AE /* RecodeViewController.swift in Sources */,
+				1D5D38262557756E00ABF9ED /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1D5D38292557756E00ABF9ED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D5D382A2557756E00ABF9ED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1D5D382E2557756F00ABF9ED /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D5D382F2557756F00ABF9ED /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D5D38322557756F00ABF9ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1D5D38332557756F00ABF9ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1D5D38352557756F00ABF9ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C0DBC8BAE1CEBF6ABF3169B /* Pods-OneWeekToDo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.2;
+				DEVELOPMENT_TEAM = 4NA6838JV9;
+				INFOPLIST_FILE = OneWeekToDo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = kubo.OneWeekToDo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1D5D38362557756F00ABF9ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFBF3BB14F6DE7E9A4EC814B /* Pods-OneWeekToDo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.2;
+				DEVELOPMENT_TEAM = 4NA6838JV9;
+				INFOPLIST_FILE = OneWeekToDo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = kubo.OneWeekToDo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D5D381B2557756E00ABF9ED /* Build configuration list for PBXProject "OneWeekToDo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D5D38322557756F00ABF9ED /* Debug */,
+				1D5D38332557756F00ABF9ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D5D38342557756F00ABF9ED /* Build configuration list for PBXNativeTarget "OneWeekToDo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D5D38352557756F00ABF9ED /* Debug */,
+				1D5D38362557756F00ABF9ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1D5D38182557756E00ABF9ED /* Project object */;
+}
