@@ -22,7 +22,8 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     @IBOutlet weak var recodeButton: UIButton!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
-//変数20210425aaaaaaaaaa
+
+//変数testtest
     var todoList=[MyTodo]()
     var recodeList=[Recode]()
     var DeadlineDayWeek:String="日曜日"
@@ -34,7 +35,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     let userDefaults = UserDefaults.standard
     let mainBoundSize: CGSize = UIScreen.main.bounds.size
 
-    //関数20210425aaaaaaaaaaa
+    //関数testtest
     func deletecell(index: Int) {
         view.isUserInteractionEnabled = false
         todoList.remove(at:index)
