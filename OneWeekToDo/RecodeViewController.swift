@@ -107,8 +107,9 @@ class RecodeViewController: UIViewController,UICollectionViewDataSource,UICollec
         
         chartDataSet.colors = [.orange]
         chartDataSet.valueTextColor=UIColor.orange
-        chartDataSet.valueFont=UIFont.init(name: "Hiragino Maru Gothic ProN", size:mainBoundSize.height/68.9)!
-        
+        if let font=UIFont.init(name: "Hiragino Maru Gothic ProN", size:mainBoundSize.height/68.9){
+            chartDataSet.valueFont=font
+        }
         
          let xAxisValue = barChartView.xAxis
          xAxisValue.valueFormatter = axisFormatDelegate
@@ -122,7 +123,9 @@ class RecodeViewController: UIViewController,UICollectionViewDataSource,UICollec
         barChartView.xAxis.labelPosition = .bottom
         barChartView.xAxis.axisLineColor=bgColor
         barChartView.xAxis.labelTextColor=UIColor.orange
-        barChartView.xAxis.labelFont=UIFont.init(name: "Hiragino Maru Gothic ProN", size:mainBoundSize.height/68.9)!
+        if let font=UIFont.init(name: "Hiragino Maru Gothic ProN", size:mainBoundSize.height/68.9){
+            barChartView.xAxis.labelFont=font
+        }
         barChartView.xAxis.labelCount = 30
         barChartView.xAxis.granularity = 1
         barChartView.leftAxis.granularity = 1.0
@@ -154,10 +157,19 @@ class RecodeViewController: UIViewController,UICollectionViewDataSource,UICollec
     
     func setup(){
         resultLabel.text="達成回数:"+String(RecodeList.filter{$0.RecodeAchievementRatio == "100"}.count)+"回"
-        resultLabel.font=UIFont.init(name: "Hiragino Maru Gothic ProN", size:mainBoundSize.height/29.8)!
-        pagePluss.titleLabel?.font=UIFont.init(name: "Hiragino Maru Gothic ProN", size:mainBoundSize.height/35.8)!
-        pageMinus.titleLabel?.font=UIFont.init(name: "Hiragino Maru Gothic ProN", size:mainBoundSize.height/35.8)!
-        returnButton.titleLabel?.font=UIFont.init(name: "Hiragino Maru Gothic ProN", size:mainBoundSize.height/44.8)!
+        
+        if let font=UIFont.init(name: "Hiragino Maru Gothic ProN", size:mainBoundSize.height/29.8){
+            resultLabel.font=font
+        }
+        if let font=UIFont.init(name: "Hiragino Maru Gothic ProN", size:mainBoundSize.height/35.8){
+            pagePluss.titleLabel?.font=font
+        }
+        if let font=UIFont.init(name: "Hiragino Maru Gothic ProN", size:mainBoundSize.height/35.8){
+            pageMinus.titleLabel?.font=font
+        }
+        if let font=UIFont.init(name: "Hiragino Maru Gothic ProN", size:mainBoundSize.height/44.8){
+            returnButton.titleLabel?.font=font
+        }
     }
     
     func setupCollectionView(){

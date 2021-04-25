@@ -21,9 +21,15 @@ class RecodeCell: UICollectionViewCell {
     }
     
     func setup(){
-        RecodeDay.font=UIFont.init(name: "Hiragino Maru Gothic ProN", size:mainBoundSize.height/89.6)!
-        RecodeAchievementRatio.font=UIFont.init(name: "Hiragino Maru Gothic ProN", size:mainBoundSize.height/29.8)!
-        recodePercent.font=UIFont.init(name: "Hiragino Maru Gothic ProN", size:mainBoundSize.height/59.7)!
+        if let font=UIFont.init(name: "Hiragino Maru Gothic ProN", size:mainBoundSize.height/89.6){
+            RecodeDay.font=font
+        }
+        if let font=UIFont.init(name: "Hiragino Maru Gothic ProN", size:mainBoundSize.height/29.8){
+            RecodeAchievementRatio.font=font
+        }
+        if let font=UIFont.init(name: "Hiragino Maru Gothic ProN", size:mainBoundSize.height/59.7){
+            recodePercent.font=font
+        }
         RecodeDay.textColor=UIColor.orange
         RecodeAchievementRatio.textColor=UIColor.orange
         recodePercent.textColor=UIColor.orange

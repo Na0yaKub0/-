@@ -32,18 +32,28 @@ class TodoCell: UITableViewCell {
     }
     
     func setup(){
-        toDoCheck.font=UIFont.init(name: "Hiragino Maru Gothic ProN", size:mainBoundSize.height/23.0)!
-        toDoLine.font=UIFont.init(name: "Hiragino Maru Gothic ProN", size:mainBoundSize.height/35.8)!
-        toDoDelete.titleLabel?.font=UIFont.init(name: "Futura-CondensedExtraBold", size:mainBoundSize.height/15.0)!
+        if let font=UIFont.init(name: "Hiragino Maru Gothic ProN", size:mainBoundSize.height/23.0){
+            toDoCheck.font=font
+        }
+        if let font=UIFont.init(name: "Hiragino Maru Gothic ProN", size:mainBoundSize.height/35.8){
+            toDoLine.font=font
+        }
+        if let font=UIFont.init(name: "Futura-CondensedExtraBold", size:mainBoundSize.height/15.0){
+            toDoDelete.titleLabel?.font=font
+        }
     }
     
     @IBAction func TitleTouch(_ sender: Any) {
-        delegate.updateTableView(index: cellindex!)
+        if let i = cellindex{
+            delegate.updateTableView(index: i)
+        }
     }
     
     
     @IBAction func DeleteTouch(_ sender: Any) {
-        delegate.deletecell(index: cellindex!)
+        if let i = cellindex{
+            delegate.deletecell(index: i)
+        }
     }
     
 }

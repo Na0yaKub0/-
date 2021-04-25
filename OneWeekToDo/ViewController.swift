@@ -94,22 +94,23 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         if let myTodoTitle = myTodo.todoTitle{
             cell.toDoLine.text=myTodoTitle
         }
-        
-        let atr =  NSMutableAttributedString(string: cell.toDoLine.text!)
-        if myTodo.Do {
-            atr.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 9, range: NSMakeRange(0, atr.length))
-            cell.toDoLine.attributedText = atr
-            cell.toDoCheck.textColor=UIColor.orange
-        }else{
-            atr.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 0, range: NSMakeRange(0, atr.length))
-            cell.toDoLine.attributedText = atr
-            cell.toDoCheck.textColor=UIColor.white
-        }
-        do{
-            let data: Data = try NSKeyedArchiver.archivedData(withRootObject: todoList, requiringSecureCoding: true)
-            userDefaults.set(data, forKey: "todoList")
-            userDefaults.synchronize()
-        }catch{
+        if let celltoDoLineRext=cell.toDoLine.text{
+            let atr =  NSMutableAttributedString(string: celltoDoLineRext)
+            if myTodo.Do {
+                atr.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 9, range: NSMakeRange(0, atr.length))
+                cell.toDoLine.attributedText = atr
+                cell.toDoCheck.textColor=UIColor.orange
+            }else{
+                atr.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 0, range: NSMakeRange(0, atr.length))
+                cell.toDoLine.attributedText = atr
+                cell.toDoCheck.textColor=UIColor.white
+            }
+            do{
+                let data: Data = try NSKeyedArchiver.archivedData(withRootObject: todoList, requiringSecureCoding: true)
+                userDefaults.set(data, forKey: "todoList")
+                userDefaults.synchronize()
+            }catch{
+            }
         }
         return cell
     }
@@ -160,18 +161,18 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     func saveRecode(){
         let save=Recode()
         var NotAchievedCount:Int = 0
-        let date = Date()
         save.RecodeDays=DeadlineMonth+"月"+DeadlineDay+"日"
         save.RecodeAchievementRatio=String(AchievementRatioValue)
         recodeList.insert(save, at: 0)
         
         for index in 0...6{
-            let modifiedDate = Calendar.current.date(byAdding: .day, value: index, to: date)!
-            let nextday=String(modifiedDate.weekdayName(.default))
-            if DeadlineDayWeek==nextday{
-                DeadlineYear=String(modifiedDate.year)
-                DeadlineMonth=String(modifiedDate.month)
-                DeadlineDay=String(modifiedDate.day)
+            if let modifiedDate = Calendar.current.date(byAdding: .day, value: index, to: Date()){
+                let nextday=String(modifiedDate.weekdayName(.default))
+                if DeadlineDayWeek==nextday{
+                    DeadlineYear=String(modifiedDate.year)
+                    DeadlineMonth=String(modifiedDate.month)
+                    DeadlineDay=String(modifiedDate.day)
+                }
             }
         }
         
@@ -217,37 +218,32 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     @objc func TimeProces(){
         var count:Int=0
         let date = Date()
-        let toYear=String(date.year)
-        let toMonth=String(date.month)
-        let toDay=String(date.day)
         for index in 0...6{
-            let modifiedDate = Calendar.current.date(byAdding: .day, value: index, to: date)!
-            let nextday=String(modifiedDate.weekdayName(.default))
-            if DeadlineDayWeek==nextday{
-                count=(index+1)
-            }
-            if count==1{
-                var hhh:Int=23
-                var mmm:Int=60
-                let hhhh=String(date.hour)
-                let mmmm=String(date.minute)
-                hhh=hhh-Int(hhhh)!
-                mmm=mmm-Int(mmmm)!
-                if mmm==60{
-                    mmm=0
-                    hhh=hhh+1
+            if let modifiedDate = Calendar.current.date(byAdding: .day, value: index, to: date){
+                let nextday=String(modifiedDate.weekdayName(.default))
+                if DeadlineDayWeek==nextday{
+                    count=(index+1)
                 }
-                RemainingTime.text="あと、"+String(hhh)+"時間"+String(mmm)+"分"
-            }else{
-                RemainingTime.text=("あと、"+String(count)+"日")
+                if count==1{
+                    var hhh:Int=23-date.hour
+                    var mmm:Int=60-date.minute
+                    if mmm==60{
+                        mmm=0
+                        hhh=hhh+1
+                    }
+                    RemainingTime.text="あと、"+String(hhh)+"時間"+String(mmm)+"分"
+                }else{
+                    RemainingTime.text=("あと、"+String(count)+"日")
+                }
             }
         }
-        if Int(DeadlineYear)!<Int(toYear)!{
+        
+        if Int(DeadlineYear)!<date.year{
             saveRecode()
-        }else if Int(DeadlineMonth)!<Int(toMonth)! && Int(DeadlineYear)!<=Int(toYear)!{
+        }else if Int(DeadlineMonth)!<date.month && Int(DeadlineYear)!<=date.year{
             saveRecode()
   
-        }else if Int(DeadlineDay)!<Int(toDay)! && Int(DeadlineMonth)!<=Int(toMonth)! && Int(DeadlineYear)!<=Int(toYear)!{
+        }else if Int(DeadlineDay)!<date.day && Int(DeadlineMonth)!<=date.month && Int(DeadlineYear)!<=date.year{
             saveRecode()
         }
     }
@@ -260,11 +256,19 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector (TimeProces), userInfo: nil, repeats: true)
         let japan = Region(calendar: Calendars.gregorian, zone: Zones.asiaTokyo, locale: Locales.japanese)
         SwiftDate.defaultRegion = japan
-        RemainingTime.font=UIFont.init(name: "Hiragino Maru Gothic ProN", size: mainBoundSize.height/35.8)!
-        DeadlineDaysButton.titleLabel?.font=UIFont.init(name: "Hiragino Maru Gothic ProN", size: mainBoundSize.height/44.8)!
-        recodeButton.titleLabel?.font=UIFont.init(name: "Hiragino Maru Gothic ProN", size: mainBoundSize.height/44.8)!
-        addButton.titleLabel?.font=UIFont.init(name: "Hiragino Maru Gothic ProN", size: mainBoundSize.height/44.8)!
         
+        if let font = UIFont.init(name: "Hiragino Maru Gothic ProN", size: mainBoundSize.height/35.8){
+            RemainingTime.font=font
+        }
+        if let font=UIFont.init(name: "Hiragino Maru Gothic ProN", size: mainBoundSize.height/44.8){
+            DeadlineDaysButton.titleLabel?.font=font
+        }
+        if let font=UIFont.init(name: "Hiragino Maru Gothic ProN", size: mainBoundSize.height/44.8){
+            recodeButton.titleLabel?.font=font
+        }
+        if let font=UIFont.init(name: "Hiragino Maru Gothic ProN", size: mainBoundSize.height/44.8){
+            addButton.titleLabel?.font=font
+        }
         tableView.backgroundColor=bgColor
         tableView.tableFooterView = UIView()
         if let value = userDefaults.string(forKey: "DeadlineDayWeek"){
@@ -301,16 +305,18 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         SetupPieChartView()
         if DeadlineMonth==""{
             var nextday:String=""
-            let date = Date()
+            
             for index in 0...6{
-                let modifiedDate = Calendar.current.date(byAdding: .day, value: index, to: date)!
-                nextday=String(modifiedDate.weekdayName(.default))
-                if DeadlineDayWeek==nextday{
-                    DeadlineYear=String(modifiedDate.year)
-                    DeadlineMonth=String(modifiedDate.month)
-                    DeadlineDay=String(modifiedDate.day)
+                if let modifiedDate = Calendar.current.date(byAdding: .day, value: index, to: Date()){
+                    nextday=String(modifiedDate.weekdayName(.default))
+                    if DeadlineDayWeek==nextday{
+                        DeadlineYear=String(modifiedDate.year)
+                        DeadlineMonth=String(modifiedDate.month)
+                        DeadlineDay=String(modifiedDate.day)
+                    }
                 }
             }
+            
             userDefaults.set(DeadlineYear, forKey: "DeadlineYear")
             userDefaults.set(DeadlineMonth, forKey: "DeadlineMonth")
             userDefaults.set(DeadlineDay, forKey: "DeadlineDay")
@@ -342,7 +348,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
                 if textField.text==""{return}
                 let myTodo = MyTodo()
                 let last=todoList.count
-                myTodo.todoTitle=textField.text!
+                myTodo.todoTitle=textField.text
                 self.todoList.append(myTodo)
                 self.tableView.insertRows(at: [IndexPath(row:last,section:0)],with:UITableView.RowAnimation.right)
                 //達成率処理
@@ -364,7 +370,9 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
                 pieChartView.rotationEnabled = false
                 
                 AchievementRatioValueLabel.text=String(AchievementRatioValue)+"%"
-                AchievementRatioValueLabel.font=UIFont.init(name: "DBLCDTempBlack", size: mainBoundSize.height/12.8)!
+                if let font=UIFont.init(name: "DBLCDTempBlack", size: mainBoundSize.height/12.8){
+                    AchievementRatioValueLabel.font=font
+                }
                 let dataEntries = [
                     PieChartDataEntry(value: Double(AchievementRatioValue), label: "A"),
                     PieChartDataEntry(value: Double(NoAchievementRatioValue), label: "B"),
@@ -390,17 +398,16 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     @IBAction func DeadlineDaysProces(_ sender: Any) {
         func saveDay(){
             var nextday:String=""
-            let date = Date()
             self.DeadlineDaysButton.setTitle("期限("+DeadlineDayWeek+")", for: .normal)
             for index in 0...6{
-                let modifiedDate = Calendar.current.date(byAdding: .day, value: index, to: date)!
-                nextday=String(modifiedDate.weekdayName(.default))
-                if DeadlineDayWeek==nextday{
-                    DeadlineYear=String(modifiedDate.year)
-                    DeadlineMonth=String(modifiedDate.month)
-                    DeadlineDay=String(modifiedDate.day)
-                }
-                
+                if let modifiedDate = Calendar.current.date(byAdding: .day, value: index, to: Date()){
+                    nextday=String(modifiedDate.weekdayName(.default))
+                    if DeadlineDayWeek==nextday{
+                        DeadlineYear=String(modifiedDate.year)
+                        DeadlineMonth=String(modifiedDate.month)
+                        DeadlineDay=String(modifiedDate.day)
+                    }
+                }                
             }
             userDefaults.set(DeadlineDayWeek, forKey: "DeadlineDayWeek")
             userDefaults.set(DeadlineYear, forKey: "DeadlineYear")
@@ -419,43 +426,36 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         let Sunday = UIAlertAction(title:"日曜日",
                                      style:UIAlertAction.Style.default) { [self](action: UIAlertAction)in
             DeadlineDayWeek="日曜日"
-            self.DeadlineDaysButton.setTitle("期限("+DeadlineDayWeek+")", for: .normal)
             saveDay()
         }
         let Monday = UIAlertAction(title:"月曜日",
                                      style:UIAlertAction.Style.default) { [self](action: UIAlertAction)in
             DeadlineDayWeek="月曜日"
-            self.DeadlineDaysButton.setTitle("期限("+DeadlineDayWeek+")", for: .normal)
             saveDay()
         }
         let Tuesday = UIAlertAction(title:"火曜日",
                                      style:UIAlertAction.Style.default) { [self](action: UIAlertAction)in
             DeadlineDayWeek="火曜日"
-            self.DeadlineDaysButton.setTitle("期限("+DeadlineDayWeek+")", for: .normal)
             saveDay()
         }
         let Wednesday  = UIAlertAction(title:"水曜日",
                                      style:UIAlertAction.Style.default) { [self](action: UIAlertAction)in
             DeadlineDayWeek="水曜日"
-            self.DeadlineDaysButton.setTitle("期限("+DeadlineDayWeek+")", for: .normal)
             saveDay()
         }
         let Thursday = UIAlertAction(title:"木曜日",
                                      style:UIAlertAction.Style.default) { [self](action: UIAlertAction)in
             DeadlineDayWeek="木曜日"
-            self.DeadlineDaysButton.setTitle("期限("+DeadlineDayWeek+")", for: .normal)
             saveDay()
         }
         let Friday  = UIAlertAction(title:"金曜日",
                                      style:UIAlertAction.Style.default) { [self](action: UIAlertAction)in
             DeadlineDayWeek="金曜日"
-            self.DeadlineDaysButton.setTitle("期限("+DeadlineDayWeek+")", for: .normal)
             saveDay()
         }
         let Saturday = UIAlertAction(title:"土曜日",
                                      style:UIAlertAction.Style.default) { [self](action: UIAlertAction)in
             DeadlineDayWeek="土曜日"
-            self.DeadlineDaysButton.setTitle("期限("+DeadlineDayWeek+")", for: .normal)
             saveDay()
         }
         alertController.addAction(Sunday)
