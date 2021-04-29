@@ -23,10 +23,15 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
 <<<<<<< HEAD
+
+//変数testtest
+=======
+<<<<<<< HEAD
 //変数testtest
 =======
 //変数20210425
 >>>>>>> b4117a4c343a99b357daf60886394cc0e01882cf
+>>>>>>> b65953ae245b333ddf48b5338209f01781010847
     var todoList=[MyTodo]()
     var recodeList=[Recode]()
     var DeadlineDayWeek:String="日曜日"
@@ -41,8 +46,12 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
 <<<<<<< HEAD
     //関数testtest
 =======
+<<<<<<< HEAD
+    //関数testtest
+=======
     //関数20210425
 >>>>>>> b4117a4c343a99b357daf60886394cc0e01882cf
+>>>>>>> b65953ae245b333ddf48b5338209f01781010847
     func deletecell(index: Int) {
         view.isUserInteractionEnabled = false
         todoList.remove(at:index)
